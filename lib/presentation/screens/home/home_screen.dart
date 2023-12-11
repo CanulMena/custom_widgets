@@ -1,4 +1,5 @@
 import 'package:custom_widgets/config/menu/menu_item.dart';
+import 'package:custom_widgets/presentation/screens/bottons/buttons_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -35,8 +36,7 @@ class CustomListTitle extends StatelessWidget {
   const CustomListTitle({
     super.key,
     required this.menuItem,
-  });
-
+  }); 
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +47,7 @@ class CustomListTitle extends StatelessWidget {
       title: Text(menuItem.title),
       subtitle: Text(menuItem.subTitle),
       onTap: () {
-        //TODO: navegar a otra pantalla
+        Navigator.push(context, MaterialPageRoute(builder: (context) => ButtonScreen(),));
       },
     );
   }
