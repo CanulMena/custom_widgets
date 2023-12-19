@@ -42,8 +42,8 @@ class CustomListTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
     return ListTile(
-      leading: Icon(menuItem.icon, color: colors.primary,),
-      trailing: Icon(Icons.arrow_forward_ios_rounded, color: colors.primary,),
+      leading: Icon(menuItem.icon, color: colors.primary,),//*Esto indica la parte izquierda del ListTile
+      trailing: Icon(Icons.arrow_forward_ios_rounded, color: colors.primary,), //*Esta es la parte derecha del ListTile
       title: Text(menuItem.title),
       subtitle: Text(menuItem.subTitle),
       onTap: () {

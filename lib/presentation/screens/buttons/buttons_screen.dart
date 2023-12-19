@@ -35,6 +35,7 @@ class _BottonsView extends StatelessWidget {
           alignment: WrapAlignment.center,
           spacing: 10,
           children: [
+
             ElevatedButton(onPressed: (){}, child: const Text('Elevated')),
             const ElevatedButton(onPressed: null, child: Text('Disnable Elavated')),
             ElevatedButton.icon(onPressed: (){}, icon: const Icon(Icons.lock_clock_sharp), label: const Text('Elevated Icon')),
@@ -48,6 +49,8 @@ class _BottonsView extends StatelessWidget {
             TextButton(onPressed: (){}, child: const Text('Text')),
             TextButton.icon(onPressed: (){}, icon: const Icon(Icons.telegram), label: const Text('Icon Text')),
 
+            _CustomButton(),
+
             IconButton(onPressed: (){}, icon: const Icon(Icons.insert_comment_rounded)),
             IconButton(
               onPressed: (){}, 
@@ -59,11 +62,32 @@ class _BottonsView extends StatelessWidget {
               ),
             IconButton.filled(onPressed: (){}, icon: const Icon(Icons.filter_list_alt)),
 
-            //TODO: crear mi icono personalizado
-
           ],
         ),
       ),
     );
+  }
+}
+
+class _CustomButton extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
+
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(20),
+      child: Material(
+        color: colors.primary,
+        child: InkWell( //? Este Widget es muy parecido al gesture dector
+          onTap: (){},
+          child: const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            child: Text('Custom Button', style: TextStyle( color: Colors.white),),
+          ),
+        ),
+      ),
+    );
+    
   }
 }
