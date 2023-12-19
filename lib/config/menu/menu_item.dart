@@ -18,16 +18,22 @@ class MenuItem { //* Esta esta clase solo nos ayudará a controlar los MenuItems
 const List<MenuItem> appMenuItems =[
   
 MenuItem(
-  title: 'botones', 
+  title: 'Botones', 
   subTitle: 'varios botones en flutter', 
   link: '/buttons', 
   icon: Icons.smart_button_outlined
   ),
 MenuItem(
-  title: 'tarjetas', 
+  title: 'Tarjetas', 
   subTitle: 'un contenedor estilizado', 
   link: '/cards', 
   icon: Icons.credit_card
+  ),
+MenuItem(
+  title: 'ProgressIndicator', 
+  subTitle: 'Generales y controlados', 
+  link: '/progress', 
+  icon: Icons.refresh_rounded
   ),
 
 ];
