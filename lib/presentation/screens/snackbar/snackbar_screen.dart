@@ -23,7 +23,7 @@ class SnackbarScreen extends StatelessWidget {
   }
 
 void openDialog(BuildContext context) {
-  showDialog(
+  showDialog( //*showDialog personalizado
     barrierDismissible: false,
     context: context,
     builder: (context) {
@@ -62,7 +62,7 @@ void openDialog(BuildContext context) {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             FilledButton.tonal(
-              onPressed: () {
+              onPressed: () { 
                 showAboutDialog(//!Este es el metodo que esta prefabricado por el equipo de flutter para poder ver las licencias
                   context: context,
                   children: [

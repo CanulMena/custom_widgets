@@ -41,5 +41,23 @@ MenuItem(
   link: '/snackbars', 
   icon: Icons.info_outline_rounded
   ),
+MenuItem(
+  title: 'Animated container', 
+  subTitle: 'stateful widget animated', 
+  link: '/animateds', 
+  icon: Icons.check_box
+  ),
+MenuItem(
+  title: 'UI Controlls + Tiles', 
+  subTitle: 'Una serie de controles en flutter', 
+  link: '/ui-controls', 
+  icon: Icons.abc_rounded
+  ),
+MenuItem(
+  title: 'Introduccion aplicaction', 
+  subTitle: 'short tutorial', 
+  link: '/tutorials', 
+  icon: Icons.thunderstorm_outlined
+  ),
 
 ];
