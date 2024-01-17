@@ -1,4 +1,6 @@
 //?Este es un archivo de barril - sirve para agregar exportaciones y con solo llamar a este archivo se importarán todos los otros
+export 'package:custom_widgets/presentation/screens/theme_changer/theme_changer_screen.dart';
+export 'package:custom_widgets/presentation/screens/counter/counter_screen.dart';
 export 'package:custom_widgets/presentation/screens/animated/animated_screen.dart';
 export 'package:custom_widgets/presentation/screens/app_tutorial/app_tutorial_screen.dart';
 export 'package:custom_widgets/presentation/screens/infinite_scroll/infinite_scroll_screen.dart';

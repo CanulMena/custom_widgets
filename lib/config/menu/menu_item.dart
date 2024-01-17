@@ -59,5 +59,29 @@ MenuItem(
   link: '/tutorials', 
   icon: Icons.thunderstorm_outlined
   ),
+MenuItem(
+  title: 'Infinitescroll and Pull', 
+  subTitle: 'infinite lists and pull to refresh', 
+  link: '/infinite', 
+  icon: Icons.medical_information_outlined
+  ),
+MenuItem(
+  title: 'Riverpod counter', 
+  subTitle: 'Introduccion to riverpod', 
+  link: '/counter', 
+  icon: Icons.plus_one
+  ),
+MenuItem(
+  title: 'Change Theme', 
+  subTitle: 'Theme change of the aplication', 
+  link: '/changer-theme', 
+  icon: Icons.change_circle
+  ),
+MenuItem(
+  title: 'Change color blocks', 
+  subTitle: 'we will change the color with keys', 
+  link: '/changer-block-color', 
+  icon: Icons.change_circle
+  ),
 
 ];

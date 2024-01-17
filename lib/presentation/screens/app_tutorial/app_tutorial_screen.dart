@@ -82,7 +82,7 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
         enReached ? Positioned(
           bottom: 10,
           right: 20,
-          child: FadeInRight(//? widget dle paquete de animate_do - 
+          child: FadeInRight(//? widget del paquete de animate_do - 
             from: 15, //? Las unidades a las que se va a mover
             delay: const Duration( seconds: 1 ), //El tiempo en que aparecerá la animacion
             child: FilledButton(

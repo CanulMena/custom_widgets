@@ -1,3 +1,4 @@
+import 'package:custom_widgets/presentation/screens/block-color-changer/changer_block_color_screen.dart';
 import 'package:custom_widgets/presentation/screens/screens.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -44,6 +45,26 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: '/tutorials',
       builder: (BuildContext context, GoRouterState state) => const AppTutorialScreen()
+    ),
+
+    GoRoute(
+      path: '/infinite',
+      builder: (BuildContext context, GoRouterState state) => const InfiniteScrollScreen()
+    ),
+
+    GoRoute(
+      path: '/counter',
+      builder: (BuildContext context, GoRouterState state) => const CounterScreen()
+    ),
+    
+    GoRoute(
+      path: '/changer-theme',
+      builder: (BuildContext context, GoRouterState state) => const ThemeChangerScreen()
+    ),
+
+    GoRoute(
+      path: '/changer-block-color',
+      builder: (BuildContext context, GoRouterState state) => const ChangerBlockColorScreen()
     ),
   ],
 );
