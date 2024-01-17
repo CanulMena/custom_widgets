@@ -15,8 +15,9 @@ class _ChangerBlockColorScreenState extends State<ChangerBlockColorScreen> {
   void initState() {
     super.initState();
     tiles = [
-      const StatlessColorfulTile(color: Colors.red),
-      const StatlessColorfulTile(color: Colors.blue),
+      StatlessColorfulTile(color: Colors.red,  key: UniqueKey(),),
+      StatlessColorfulTile(color: Colors.blue,  key: UniqueKey(),),
+      
     ];
   }
 
@@ -56,7 +57,9 @@ class _ChangerBlockColorScreenState extends State<ChangerBlockColorScreen> {
 
 class StatlessColorfulTile extends StatelessWidget {
   final Color color;
-  const StatlessColorfulTile({super.key, required this.color});
+  const StatlessColorfulTile({
+    super.key, 
+    required this.color});
 
   @override
   Widget build(BuildContext context) {

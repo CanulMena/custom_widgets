@@ -26,4 +26,13 @@ class AppTheme {
     useMaterial3: true,
     colorSchemeSeed: colorList[selectedColor],
   );
+
+  AppTheme copyWith({
+    bool? isDarkMode,
+    int? selectedColor
+  }) => AppTheme(
+    isDarkMode: isDarkMode ?? this.isDarkMode,
+    selectedColor: selectedColor ?? this.selectedColor
+  );
+
 }

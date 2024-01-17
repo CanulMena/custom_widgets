@@ -9,18 +9,42 @@ final isDarkModeProvider = StateProvider<bool>((ref) => false);
 
 final selectedColorProvider = StateProvider<int>((ref) => 0);
 
+
+
+
+
+
+
+
+
+
+
+
 //*Cuando el estado es un poco mas elaborado podemos usar StateNotifierProvider. Aquí el ejemplo:
 //Un objeto / instancia de tipo AppTheme ( custom )
-// final themeNotifierProvider = StateNotifierProvider<AppTheme>((ref) => null);
+final themeNotifierProvider = StateNotifierProvider<ThemeNotifier, AppTheme>(
+  (ref) => ThemeNotifier()
+  );
 
-// class ThemeNotifier extends StateNotifier{
-//   //*Literalmente estoy creando una instancia de la clase AppTheme()
-//   // STATE = Estado = new AppTheme();
-//   ThemeNotifier() : super( AppTheme() );
+class ThemeNotifier extends StateNotifier<AppTheme>{
+  //*Literalmente estoy creando una instancia de la clase AppTheme()
+  // STATE = Estado = new AppTheme();
+  // Dentro del constructor del StateNotifierProvider nos pide crear una instacia es por eso que en super agregamos la instancia que queremos modificar
+  ThemeNotifier() : super( AppTheme() );
+
+  final List<Color> colorListP = colorList;
 
 
+  void toggleDarkMode(){
+    state = state.copyWith(isDarkMode: !state.isDarkMode);
+  }
 
-// }
+  void changeColorIndex( int index){
+    state = state.copyWith(selectedColor: index);
+    
+  }
+
+}
 
 
 
@@ -37,5 +61,16 @@ final selectedColorProvider = StateProvider<int>((ref) => 0);
 ? final bool isDarkMode = ref.watch(isDarkModeProvider); con esto obtendríamos el valor del false
 *Pero si queremos cambiar el valor del false. Podemo obtener el StateProvider<bool>((ref) => false
 *Para que de esa manera estemos modificacion el valor que esta regresando el StateProvider<bool>((ref) => false
-? ref.red(isDarkModeProvider.notifier).state.update((state) => !state); De esta manera modificacom el valor que regresa ese StateProvider
+? ref.red(isDarkModeProvider.notifier).update((state) => !state); De esta manera modificacom el valor que regresa ese StateProvider
+**/
+
+/*
+*El super esta relacionado con el constructor de la clase que se esta heredando 
+
+existen formas de utilizar el super.
+al usar extend - usar una herencia estamos pasando todos sus metodos a la clase que le estamos haciendo el extend
+por lo tanto nos permite usar sus metodos al invocar la palabra super. 
+
+Pero tambien podemos heredar el constructor de la clase a la clase que le queremos heredar, utilizamos super(). Nos indica que podemos heredar su constructor
+
 **/
