@@ -10,4 +10,4 @@ export 'package:custom_widgets/presentation/screens/ui_controlls/ui_controlls_sc
 export 'package:custom_widgets/presentation/screens/buttons/buttons_screen.dart';
 export 'package:custom_widgets/presentation/screens/cards/cards_screen.dart';
 export 'package:custom_widgets/presentation/screens/home/home_screen.dart';
-
+export 'package:custom_widgets/presentation/screens/block-color-changer/changer_block_color_screen.dart';
